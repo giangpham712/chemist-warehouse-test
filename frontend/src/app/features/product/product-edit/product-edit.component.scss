@@ -1,0 +1,19 @@
+.spacer {
+  flex: 1 1 auto;
+}
+
+mat-form-field {
+  display: block;
+  width: 400px;
+  margin-bottom: 10px;
+}
+
+.buttons {
+  margin-top: 20px;
+
+  .mat-button-base {
+    margin: 8px 8px 8px 0;
+  }
+}
+
+

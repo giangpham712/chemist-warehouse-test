@@ -1,0 +1,52 @@
+<mat-card class="mat-elevation-z8">
+  <mat-card-content>
+    <mat-toolbar>
+      <span *ngIf="pageType === 'new'">New Product</span>
+      <span *ngIf="pageType === 'edit'">{{productName}}</span>
+      <span class="spacer"></span>
+    </mat-toolbar>
+    <form *ngIf="form" [formGroup]="form" (ngSubmit)="saveProduct()" novalidate>
+      <mat-form-field>
+        <mat-label>Name</mat-label>
+        <input matInput placeholder="Name"
+               name="name"
+               formControlName="name"
+               required>
+        <mat-error *ngIf="form.controls.name.hasError('required')">
+          Name is required
+        </mat-error>
+      </mat-form-field>
+
+      <mat-form-field>
+        <mat-label>Price</mat-label>
+        <input type="text" placeholder="Price"
+               matInput [decimalPlaces]="2"
+               name="price"
+               formControlName="price"
+               required>
+        <mat-error *ngIf="form.controls.price.hasError('required')">
+          Price is required
+        </mat-error>
+      </mat-form-field>
+
+      <mat-form-field>
+        <mat-label>Type</mat-label>
+        <mat-select formControlName="type">
+          <mat-option *ngFor="let type of productTypes" [value]="type">{{type}}</mat-option>
+        </mat-select>
+        <mat-error *ngIf="form.controls.type.hasError('required')">
+          Price is required
+        </mat-error>
+      </mat-form-field>
+
+      <div>
+        <mat-slide-toggle formControlName="active">Active</mat-slide-toggle>
+      </div>
+
+      <div class="buttons">
+        <button type="button" mat-stroked-button color="" [routerLink]="'/product'">Back</button>
+        <button type="submit" mat-flat-button color="primary">Save</button>
+      </div>
+    </form>
+  </mat-card-content>
+</mat-card>
