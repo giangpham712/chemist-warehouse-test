@@ -3,25 +3,27 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30717.126
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChemistWarehouse.TechnicalTest.Api", "ChemistWarehouse.TechnicalTest.Api\ChemistWarehouse.TechnicalTest.Api.csproj", "{1CAD4A11-AA69-4C0B-A5F7-DFEEAB7F4853}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ChemistWarehouse.TechnicalTest.Api", "ChemistWarehouse.TechnicalTest.Api\ChemistWarehouse.TechnicalTest.Api.csproj", "{1CAD4A11-AA69-4C0B-A5F7-DFEEAB7F4853}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Core", "Core", "{8429E703-6F6D-45F6-AD5F-6AC846B3867C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChemistWarehouse.TechnicalTest.Domain", "ChemistWarehouse.TechnicalTest.Domain\ChemistWarehouse.TechnicalTest.Domain.csproj", "{D8A98960-2BBD-47D1-9684-FDD55AA47E3E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ChemistWarehouse.TechnicalTest.Domain", "ChemistWarehouse.TechnicalTest.Domain\ChemistWarehouse.TechnicalTest.Domain.csproj", "{D8A98960-2BBD-47D1-9684-FDD55AA47E3E}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastructure", "Infrastructure", "{3AC7DD09-AA2A-4C4F-91ED-357EFC9D420A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChemistWarehouse.TechnicalTest.EntityFramework", "ChemistWarehouse.TechnicalTest.EntityFramework\ChemistWarehouse.TechnicalTest.EntityFramework.csproj", "{B087D137-204E-4C8F-9DCC-9CC0A7184122}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ChemistWarehouse.TechnicalTest.EntityFramework", "ChemistWarehouse.TechnicalTest.EntityFramework\ChemistWarehouse.TechnicalTest.EntityFramework.csproj", "{B087D137-204E-4C8F-9DCC-9CC0A7184122}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Application", "Application", "{B2A56F26-E521-46A7-9A8F-E777300F6446}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChemistWarehouse.TechnicalTest.Application", "ChemistWarehouse.TechnicalTest.Application\ChemistWarehouse.TechnicalTest.Application.csproj", "{141B034F-D74E-4EBA-969C-A9300F7DE58C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ChemistWarehouse.TechnicalTest.Application", "ChemistWarehouse.TechnicalTest.Application\ChemistWarehouse.TechnicalTest.Application.csproj", "{141B034F-D74E-4EBA-969C-A9300F7DE58C}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{2EE096BA-C026-4F8E-847C-195293D7E17F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChemistWarehouse.TechnicalTest.Common", "ChemistWarehouse.TechnicalTest.Common\ChemistWarehouse.TechnicalTest.Common.csproj", "{B027F014-BC8F-48DC-B473-7B242A98B1DE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ChemistWarehouse.TechnicalTest.Common", "ChemistWarehouse.TechnicalTest.Common\ChemistWarehouse.TechnicalTest.Common.csproj", "{B027F014-BC8F-48DC-B473-7B242A98B1DE}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Presentation", "Presentation", "{8DD61696-1F7F-4B2C-8C05-FD5B9562A588}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChemistWarehouse.TechnicalTest.Application.Tests", "ChemistWarehouse.TechnicalTest.Application.Tests\ChemistWarehouse.TechnicalTest.Application.Tests.csproj", "{D076C738-34D9-4334-89C6-8BBB5078CB85}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -49,6 +51,10 @@ Global
 		{B027F014-BC8F-48DC-B473-7B242A98B1DE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B027F014-BC8F-48DC-B473-7B242A98B1DE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B027F014-BC8F-48DC-B473-7B242A98B1DE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D076C738-34D9-4334-89C6-8BBB5078CB85}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D076C738-34D9-4334-89C6-8BBB5078CB85}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D076C738-34D9-4334-89C6-8BBB5078CB85}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D076C738-34D9-4334-89C6-8BBB5078CB85}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -59,6 +65,7 @@ Global
 		{B087D137-204E-4C8F-9DCC-9CC0A7184122} = {3AC7DD09-AA2A-4C4F-91ED-357EFC9D420A}
 		{141B034F-D74E-4EBA-969C-A9300F7DE58C} = {B2A56F26-E521-46A7-9A8F-E777300F6446}
 		{B027F014-BC8F-48DC-B473-7B242A98B1DE} = {8429E703-6F6D-45F6-AD5F-6AC846B3867C}
+		{D076C738-34D9-4334-89C6-8BBB5078CB85} = {2EE096BA-C026-4F8E-847C-195293D7E17F}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {3934F36A-800F-4785-B276-20F95488B8C5}

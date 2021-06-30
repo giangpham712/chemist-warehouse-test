@@ -16,6 +16,7 @@ using ChemistWarehouse.TechnicalTest.Application.Products;
 using ChemistWarehouse.TechnicalTest.Domain.Products;
 using ChemistWarehouse.TechnicalTest.EntityFramework;
 using ChemistWarehouse.TechnicalTest.EntityFramework.Repositories;
+using FluentValidation.AspNetCore;
 using Microsoft.EntityFrameworkCore;
 
 namespace ChemistWarehouse.TechnicalTest.Api
@@ -33,7 +34,9 @@ namespace ChemistWarehouse.TechnicalTest.Api
         public void ConfigureServices(IServiceCollection services)
         {
 
-            services.AddControllers();
+            services.AddControllers()
+                .AddFluentValidation(c => c.RegisterValidatorsFromAssemblyContaining<ProductValidator>());
+
             services.AddCors(options =>
             {
                 options.AddPolicy("Default", builder =>
