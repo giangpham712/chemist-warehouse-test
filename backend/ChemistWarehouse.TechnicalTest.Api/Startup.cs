@@ -54,6 +54,7 @@ namespace ChemistWarehouse.TechnicalTest.Api
 
             services.AddTransient<IProductRepository, EfProductRepository>();
             services.AddTransient<IProductService, ProductService>();
+            services.AddTransient<IProductBuilderFactory, ProductBuilderFactory>();
 
             services.AddSwaggerGen(c =>
             {

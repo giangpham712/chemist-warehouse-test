@@ -18,25 +18,25 @@ namespace ChemistWarehouse.TechnicalTest.Domain.Products
             _product = product;
         }
 
-        public ProductBuilder WithName(string name)
+        public IProductBuilder WithName(string name)
         {
             _product.Name = name;
             return this;
         }
 
-        public ProductBuilder WithPrice(decimal price)
+        public IProductBuilder WithPrice(decimal price)
         {
             _product.Price = price;
             return this;
         }
 
-        public ProductBuilder WithType(string type)
+        public IProductBuilder WithType(string type)
         {
             _product.Type = type;
             return this;
         }
 
-        public ProductBuilder WithStatus(bool active)
+        public IProductBuilder WithStatus(bool active)
         {
             _product.Active = active;
             return this;
@@ -50,6 +50,11 @@ namespace ChemistWarehouse.TechnicalTest.Domain.Products
 
     public interface IProductBuilder
     {
+        IProductBuilder WithName(string name);
+        IProductBuilder WithPrice(decimal price);
+        IProductBuilder WithType(string type);
+        IProductBuilder WithStatus(bool active);
+
         Product Build();
     }
 }

@@ -14,12 +14,14 @@ namespace ChemistWarehouse.TechnicalTest.Application.Products
     public class ProductService : IProductService
     {
         private readonly IProductRepository _productRepository;
+        private readonly IProductBuilderFactory _productBuilderFactory;
         private readonly IMapper _mapper;
 
-        public ProductService(IProductRepository productRepository, IMapper mapper)
+        public ProductService(IProductRepository productRepository, IMapper mapper, IProductBuilderFactory productBuilderFactory)
         {
             _productRepository = productRepository;
             _mapper = mapper;
+            _productBuilderFactory = productBuilderFactory;
         }
 
         public async Task<PagedResult<ProductDto>> GetProductListAsync(GetProductListDto input)
@@ -55,7 +57,8 @@ namespace ChemistWarehouse.TechnicalTest.Application.Products
 
         public async Task<ProductDto> CreateProductAsync(ProductDto input)
         {
-            var productBuilder = new ProductBuilder()
+            var productBuilder = _productBuilderFactory.CreateForNew();
+            productBuilder
                 .WithName(input.Name)
                 .WithPrice(input.Price)
                 .WithStatus(input.Active)
@@ -76,7 +79,8 @@ namespace ChemistWarehouse.TechnicalTest.Application.Products
                 throw new EntityNotFoundException(nameof(Product), id);
             }
 
-            var productBuilder = new ProductBuilder(existingProduct)
+            var productBuilder = _productBuilderFactory.CreateForUpdate(existingProduct);
+            productBuilder
                 .WithName(input.Name)
                 .WithPrice(input.Price)
                 .WithStatus(input.Active)
